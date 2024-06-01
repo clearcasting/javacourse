@@ -1,24 +1,58 @@
 public class Account {
-    private String accountNumber = "";
-    private double accountBalance = 0;
+    private String number = "";
+    private double balance = 0;
     private String customerName = "";
-    private String email = "";
-    private String phoneNumber = "";
+    private String customerEmail = "";
+    private String customerPhone = "";
 
-    public String getAccountNumber() {
-        return accountNumber;
+    public Account() {
+        System.out.println("Empty constructor called");
     }
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
+    public Account(String number, double balance, String customerName, String email, String phone) {
+        System.out.println("Account constructor with parameters called");
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        customerEmail = email;
+        customerPhone = phone;
+
     }
 
-    public double getAccountBalance() {
-        return accountBalance;
+    public void depositFunds(double fundsToDeposit) {
+        if (fundsToDeposit <= 0) {
+            System.out.println("You cannot deposit no value.");
+        }  else {
+            balance += fundsToDeposit;
+            System.out.println("You have successfully deposited: $" + fundsToDeposit);
+            System.out.println("Your updated balance is: $" + balance);
+        }
     }
 
-    public void setAccountBalance(double accountBalance) {
-        this.accountBalance = accountBalance;
+    public void withdrawFunds(double fundsToWithdraw) {
+        if(balance - fundsToWithdraw < 0) {
+            System.out.println("Insufficient funds");
+        } else {
+            balance -= fundsToWithdraw;
+            System.out.println("You have successfully withdrawn: $" + fundsToWithdraw);
+            System.out.println("Your updated balance is: $" + balance);
+        }
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public String getCustomerName() {
@@ -29,40 +63,20 @@ public class Account {
         this.customerName = customerName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getCustomerPhone() {
+        return customerPhone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public void depositFunds(double fundsToDeposit) {
-        if (fundsToDeposit <= 0) {
-            System.out.println("You cannot deposit no value.");
-        }  else {
-            accountBalance += fundsToDeposit;
-            System.out.println("You have successfully deposited: $" + fundsToDeposit);
-            System.out.println("Your updated balance is: $" + accountBalance);
-        }
-    }
-
-    public void withdrawFunds(double fundsToWithdraw) {
-        if(accountBalance - fundsToWithdraw < 0) {
-            System.out.println("Insufficient funds");
-        } else {
-            accountBalance -= fundsToWithdraw;
-            System.out.println("You have successfully withdrawn: $" + fundsToWithdraw);
-            System.out.println("Your updated balance is: $" + accountBalance);
-        }
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 
 }
