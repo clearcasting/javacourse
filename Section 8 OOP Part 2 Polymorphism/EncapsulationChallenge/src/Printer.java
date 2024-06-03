@@ -10,7 +10,7 @@ public class Printer {
     }
 
     public int addToner(int tonerAmount) {
-        if (tonerAmount + tonerLevel > 100 || tonerAmount + tonerLevel < 0) {
+        if (tonerAmount <= 0 || tonerAmount > 100 || tonerAmount + tonerLevel > 100) {
             return -1;
         }
         tonerLevel += tonerAmount;
