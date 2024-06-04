@@ -26,9 +26,6 @@ public class MealOrder {
     }
 
     public void printOrder() {
-        boolean isDeluxe = burger.getType() == "deluxe";
-        double total = isDeluxe ? (burger.getPrice() + drink.getPrice() + side.getPrice())
-                : (burger.getPrice() + burger.getToppingsPrice() + drink.getPrice() + side.getPrice());
         System.out.printf("""
                 Price of burger: $%.2f
                 Price of toppings: $%.2f
@@ -37,50 +34,47 @@ public class MealOrder {
                 
                 Your total is $%.2f%n
                 """,
-                burger.getPrice(), isDeluxe ? 0 : burger.getToppingsPrice(), drink.getPrice(), side.getPrice(), total);
+                burger.getPrice(), getClass().getSimpleName() == "DeluxeBurger" ? 0 : burger.getToppingsPrice(),
+                drink.getPrice(), side.getPrice(), calculateTotal());
+    }
+
+    public double calculateTotal() {
+        String className = getClass().getSimpleName();
+        double total = className == "DeluxeBurger" ? (burger.getPrice() + drink.getPrice() + side.getPrice())
+                : (burger.getPrice() + burger.getToppingsPrice() + drink.getPrice() + side.getPrice());
+
+        return total;
     }
 }
 
 class Burger {
-    private String type;
     private double price;
     private double toppingsPrice;
 
     public Burger() {
-        this.type = "regular burger";
         this.price = 10.00;
-    }
-
-    public Burger(String type) {
-        if (type == "deluxe") {
-            this.type = type;
-            this.price = 13.00;
-        } else {
-            this.type = type;
-            this.price = 10.00;
-        }
     }
 
     public void addToppings() {
         Scanner scanner = new Scanner(System.in);
         int toppingsCounter = 0;
+        String className = getClass().getSimpleName();
 
         String introduction = """
+                If you are not interested in any additional extra toppings enter any key.
                 Please select up to 3 additional toppings.
                 Deluxe burgers may choose up to 5 toppings.
+                
                 Available choices are:
                 Onions: $0.25
                 Mushrooms: $0.25
                 Pickles: $0.50
                 BBQ Sauce: $0.50
                 Bacon: $1.00
-                
-                If you are not interested in any additional extra toppings enter any key.
                 """;
         System.out.println(introduction);
 
-
-        loop: while (type != "deluxe" ? toppingsCounter < 3 : toppingsCounter < 5) {
+        loop: while (className != "DeluxeBurger" ? toppingsCounter < 3 : toppingsCounter < 5) {
             String result = scanner.nextLine();
             switch (result.toLowerCase()) {
                 case "pickles", "bbq sauce" -> toppingsPrice += 0.5;
@@ -92,7 +86,7 @@ class Burger {
             }
             toppingsCounter++;
         }
-        if (type == "deluxe") toppingsPrice = 0;
+        if (className == "DeluxeBurger") toppingsPrice = 0;
     }
 
     public double getPrice() {
@@ -101,10 +95,6 @@ class Burger {
 
     public double getToppingsPrice() {
         return toppingsPrice;
-    }
-
-    public String getType() {
-        return type;
     }
 }
 
@@ -170,6 +160,19 @@ class Side {
         this.price = 1.50;
     }
 
+    public double getPrice() {
+        return price;
+    }
+}
+
+class DeluxeBurger extends Burger {
+    private double price;
+
+    public DeluxeBurger() {
+        this.price = 13.00;
+    }
+
+    @Override
     public double getPrice() {
         return price;
     }
