@@ -7,12 +7,14 @@ public class MealOrder {
 
     public MealOrder() {
         this.burger = new Burger();
-//        this.drink = "small coke";
-//        this.side = "fries";
+        this.drink = new Drink();
+        this.side = new Side();
     }
 
     public MealOrder(Side side, Drink drink, Burger burger) {
-
+        this.side = side;
+        this.drink = drink;
+        this.burger = burger;
     }
 
     public void addToppings() {
@@ -20,42 +22,49 @@ public class MealOrder {
     }
 
     public void changeDrinkSize() {
-
+        drink.changeDrinkSize();
     }
 
     public void printOrder() {
-        //price of burger
-        //price of any extra toppings
-        //drink price based on size
-        //side item price
-        //print total
+        boolean isDeluxe = burger.getType() == "deluxe";
+        double total = isDeluxe ? (burger.getPrice() + drink.getPrice() + side.getPrice())
+                : (burger.getPrice() + burger.getToppingsPrice() + drink.getPrice() + side.getPrice());
+        System.out.printf("""
+                Price of burger: $%.2f
+                Price of toppings: $%.2f
+                Price of drink: $%.2f
+                Price of side item: $%.2f
+                
+                Your total is $%.2f%n
+                """,
+                burger.getPrice(), isDeluxe ? 0 : burger.getToppingsPrice(), drink.getPrice(), side.getPrice(), total);
     }
 }
 
 class Burger {
     private String type;
     private double price;
-    private String toppings;
+    private double toppingsPrice;
 
     public Burger() {
         this.type = "regular burger";
         this.price = 10.00;
     }
 
-    public Burger(String type, double price) {
+    public Burger(String type) {
         if (type == "deluxe") {
             this.type = type;
-            this.price = 15.00;
+            this.price = 13.00;
         } else {
             this.type = type;
-            this.price = price;
+            this.price = 10.00;
         }
     }
 
     public void addToppings() {
         Scanner scanner = new Scanner(System.in);
         int toppingsCounter = 0;
-        double toppingsTotal = 0;
+
         String introduction = """
                 Please select up to 3 additional toppings.
                 Deluxe burgers may choose up to 5 toppings.
@@ -71,20 +80,31 @@ class Burger {
         System.out.println(introduction);
 
 
-        loop: while (type != "deluxe" ? toppingsCounter <= 3 : toppingsCounter <= 5) {
+        loop: while (type != "deluxe" ? toppingsCounter < 3 : toppingsCounter < 5) {
             String result = scanner.nextLine();
             switch (result.toLowerCase()) {
-                case "pickles", "bbq sauce" -> toppingsTotal += 0.5;
-                case "onions", "mushrooms" -> toppingsTotal += 0.25;
-                case "bacon" -> toppingsTotal += 1;
+                case "pickles", "bbq sauce" -> toppingsPrice += 0.5;
+                case "onions", "mushrooms" -> toppingsPrice += 0.25;
+                case "bacon" -> toppingsPrice += 1;
                 default -> {
                     break loop;
                 }
             }
             toppingsCounter++;
         }
+        if (type == "deluxe") toppingsPrice = 0;
+    }
 
-        price += (type != "deluxe" ? toppingsTotal : 0);
+    public double getPrice() {
+        return price;
+    }
+
+    public double getToppingsPrice() {
+        return toppingsPrice;
+    }
+
+    public String getType() {
+        return type;
     }
 }
 
@@ -102,12 +122,7 @@ class Drink {
     public Drink(String type, String size) {
         this.type = type;
         this.size = size;
-
-        switch (size) {
-            case "small" -> price = 1.75;
-            case "medium" -> price = 2.50;
-            case "large" -> price = 3.00;
-        }
+        setPriceBySize(size);
     }
 
     public void changeDrinkSize() {
@@ -121,9 +136,41 @@ class Drink {
                     System.out.println("Drink size is already " + newSize);
                 } else {
                     size = newSize;
+                    setPriceBySize(size);
                 }
             }
             default -> System.out.println("Size change cancelled");
         }
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPriceBySize(String size) {
+        switch (size) {
+            case "small" -> price = 1.75;
+            case "medium" -> price = 2.50;
+            case "large" -> price = 3.00;
+        }
+    }
+}
+
+class Side {
+    private String type;
+    private double price;
+
+    public Side() {
+        this.type = "fries";
+        this.price = 1.50;
+    }
+
+    public Side(String type) {
+        this.type = type;
+        this.price = 1.50;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }
