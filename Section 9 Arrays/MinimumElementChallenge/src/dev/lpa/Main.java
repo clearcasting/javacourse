@@ -8,6 +8,14 @@ public class Main {
         int[] integerArray = readIntegers();
         System.out.println(Arrays.toString(integerArray));
         System.out.println(findMin(integerArray));
+
+        System.out.println("Before reversal: ");
+        System.out.println(Arrays.toString(integerArray));
+
+        reverse(integerArray);
+        System.out.println("After reversal: ");
+        System.out.println(Arrays.toString(integerArray));
+
     }
 
     private static int[] readIntegers() {
@@ -34,5 +42,15 @@ public class Main {
             }
         }
         return lowestNumber;
+    }
+
+    private static void reverse(int[] array) {
+        int placeholder = 0;
+        for (int i = 0; i < array.length / 2; i++) {
+            placeholder = array[array.length - (1 + i)];
+
+            array[array.length - (1 + i)] = array[i];
+            array[i] = placeholder;
+        }
     }
 }
