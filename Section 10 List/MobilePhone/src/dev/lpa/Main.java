@@ -12,19 +12,60 @@ class MobilePhone {
     private String myNumber;
     private ArrayList<Contact> myContacts;
 
-    MobilePhone(String myNumber) {
+    public MobilePhone(String myNumber) {
         this.myNumber = myNumber;
+        myContacts = new ArrayList<>();
     }
 
-    private boolean addNewContact(Contact contact) {
-        for (Contact element: myContacts){
-            if (myContacts.indexOf(contact) < 0) {
-
-            }
+    public boolean addNewContact(Contact contact) {
+        if (findContact(contact.getName()) == -1) {
+            return myContacts.add(contact);
         }
         return false;
     }
 
+    public boolean updateContact(Contact oldContact, Contact newContact) {
+        int oldContactIndex = findContact(oldContact);
+
+        if(oldContactIndex > -1) {
+            myContacts.set(oldContactIndex, newContact);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean removeContact(Contact contact) {
+        return myContacts.remove(contact);
+    }
+
+    private int findContact(Contact contact) {
+        return myContacts.indexOf(contact);
+    }
+
+    private int findContact(String contact) {
+        for (Contact e: myContacts) {
+            if(e.getName() == contact) {
+                return findContact(e);
+            }
+        }
+        return -1;
+    }
+
+    public Contact queryContact(String contact) {
+        int contactIndex = findContact(contact);
+
+        if (contactIndex > -1) {
+            return myContacts.get(contactIndex);
+        }
+        return null;
+    }
+
+    public void printContacts() {
+        System.out.println("Contact List:");
+        for (Contact e: myContacts) {
+            System.out.printf("%d. %s -> %s%n", findContact(e) + 1, e.getName(), e.getPhoneNumber());
+        }
+    }
 }
 
 class Contact {
@@ -36,7 +77,7 @@ class Contact {
         this.phoneNumber = phoneNumber;
     }
 
-    private static Contact createContact(String name, String phoneNumber) {
+    public static Contact createContact(String name, String phoneNumber) {
         return new Contact(name, phoneNumber);
     }
 
