@@ -8,17 +8,18 @@ public interface Mappable {
     String label();
     GeometryType type();
     IconType marker();
+    String JSON_PROPERTY = """
+            "properties": {%s} """;
 
     // challenge says print but real world you would return json
-    default void toJSON(Mappable m) {
-        String JSON_PROPERTY = String.format("""
-                "properties": {
-                    "type": "%s",
-                    "label": "%s",
-                    "marker": "%s",
-                }
-                """, m.type(), m.label(), m.marker());
-        System.out.println(JSON_PROPERTY);
+    default String toJSON() {
+        return """
+                 "type": "%s", "label": "%s", "marker": "%s",\s"""
+                .formatted(type(), label(), marker());
+    }
+
+    static void mapIt(Mappable m) {
+        System.out.println(JSON_PROPERTY.formatted(m.toJSON()));
     }
 
     static void printProperties(Mappable instance) {
@@ -28,9 +29,8 @@ public interface Mappable {
     }
 }
 
+enum Usage {COMMERCIAL, GOVERNMENT};
 class Building implements Mappable {
-    enum Usage {COMMERCIAL, GOVERNMENT};
-
     private String label;
     private GeometryType type;
     private IconType marker;
@@ -47,7 +47,7 @@ class Building implements Mappable {
 
     @Override
     public String label() {
-        return label;
+        return label + " ("+ usage + ")";
     }
 
     @Override
@@ -61,26 +61,19 @@ class Building implements Mappable {
     }
 
     @Override
-    public void toJSON(Mappable m) {
-        String JSON_PROPERTY = String.format("""
-                "properties": {
-                    "type": "%s",
-                    "label": "%s (%s)",
-                    "marker": "%s",
-                    "name": "%s",
-                    "usage": "%s",
-                }
-                """, m.type(), m.label(), usage, m.marker(), name, usage);
-        System.out.println(JSON_PROPERTY);
+    public String toJSON() {
+        return Mappable.super.toJSON() + """
+                 "name": "%s", "usage": "%s","""
+                .formatted(name, usage);
     }
 }
 
+enum Utility {FIBER_OPTIC, SATELLITE}
 class UtilityLine implements Mappable {
     String label;
     GeometryType type;
     IconType marker;
     String name;
-    enum Utility {FIBER_OPTIC, SATELLITE}
     Utility utility;
 
     public UtilityLine(String label, GeometryType type, IconType marker, String name, Utility utility) {
@@ -93,7 +86,7 @@ class UtilityLine implements Mappable {
 
     @Override
     public String label() {
-        return label;
+        return label + " ("+ utility + ")";
     }
 
     @Override
@@ -107,16 +100,8 @@ class UtilityLine implements Mappable {
     }
 
     @Override
-    public void toJSON(Mappable m) {
-        String JSON_PROPERTY = String.format("""
-                "properties": {
-                    "type": "%s",
-                    "label": "%s (%s)",
-                    "marker": "%s",
-                    "name": "%s",
-                    "utility": "%s",
-                }
-                """, m.type(), m.label(), utility, m.marker(), name, utility);
-        System.out.println(JSON_PROPERTY);
+    public String toJSON() {
+        return Mappable.super.toJSON() + """
+                 "name": "%s", "utility": "%s",""".formatted(name, utility);
     }
 }
