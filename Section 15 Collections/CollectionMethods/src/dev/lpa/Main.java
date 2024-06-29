@@ -1,14 +1,9 @@
 package dev.lpa;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<Card> deck = Card.getStandardDeck();
-        Card.printDeck(deck);
 
         Card[] cardArray = new Card[13];
         Card aceOfHearts = Card.getFaceCard(Card.Suit.HEART, 'A');
@@ -36,5 +31,18 @@ public class Main {
 
         cards = List.copyOf(kingsOfClubs);
         Card.printDeck(cards, "List Copy of Kings", 1);
+
+        List<Card> deck = Card.getStandardDeck();
+        Card.printDeck(deck);
+
+        Collections.shuffle(deck);
+        Card.printDeck(deck, "Shuffle Deck", 4);
+
+        Collections.reverse(deck);
+        Card.printDeck(deck, "Reversed Deck of Cards", 4);
+
+        var sortingAlgorithm = Comparator.comparing(Card::rank)
+                        .thenComparing(Card::suit);
+        Collections.sort(deck, sortingAlgorithm);
     }
 }
