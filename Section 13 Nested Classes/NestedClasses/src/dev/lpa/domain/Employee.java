@@ -8,7 +8,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int employeeId, String name, int yearStarted) {
+    public Employee (int employeeId, String name, int yearStarted) {
         this.employeeId = employeeId;
         this.name = name;
         this.yearStarted = yearStarted;
