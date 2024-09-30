@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="878758c4-c521-4c63-91ac-0b959febf8f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/Comparing.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/src/dev/lpa/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/GenericChallenge.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/Layer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/Mappable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/Park.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/River.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Generics/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section 12 Generics/Generics/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Generics/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section 12 Generics/Generics/src/dev/lpa/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Generics/src/dev/lpa/Team.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/lpa/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/lpa/burger/Meal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/lpa/burger/Store.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dev/lpa/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/lpa/domain/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dev/lpa/domain/EmployeeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/lpa/domain/EmployeeComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/lpa/domain/StoreEmployee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section 14 Lambda Expressions/LambdaIntro/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section 14 Lambda Expressions/LambdaIntro/src/dev/lpa/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,21 +23,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "clearcasting"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;clearcasting&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/clearcasting/javacourse.git",
-    "accountId": "e5db543b-f1d2-4f06-b586-95dd48935bd8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/clearcasting/javacourse.git&quot;,
+    &quot;accountId&quot;: &quot;e5db543b-f1d2-4f06-b586-95dd48935bd8&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2jtKWgJmVvisajXJ7EQFQWlEQJY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -74,6 +48,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "genericsreview",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "editor.preferences.appearance",
     "vue.rearranger.settings.migration": "true"
@@ -96,6 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722200965717</updated>
       <workItem from="1722200966717" duration="284000" />
+      <workItem from="1727716187629" duration="811000" />
     </task>
     <servers />
   </component>
