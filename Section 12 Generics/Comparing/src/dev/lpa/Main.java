@@ -9,7 +9,7 @@ public class Main {
         Integer five = 5;
         Integer[] others = {0, 5, 10, -50, 50};
 
-        for (Integer i: others) {
+        for (Integer i : others) {
             int val = five.compareTo(i);
             System.out.printf("%d %s %d: compareTo=%d%n", five,
                     (val == 0 ? "==" : (val < 0) ? "<" : ">"), i, val);
@@ -21,14 +21,18 @@ public class Main {
         for (String s: fruit) {
             int val = banana.compareTo(s);
             System.out.printf("%s %s %s: compareTo=%d%n", banana,
-                    (val == 0 ? "==" : (val < 0) ? "<" : ">"), s ,val);
+                    (val == 0 ? "==" : (val < 0) ? "<" : ">"), s, val);
         }
 
         Arrays.sort(fruit);
         System.out.println(Arrays.toString(fruit));
 
-        Student tim = new Student ("Tim");
-        Student [] students = {new Student("Zach"), new Student("Tim"), new Student("Ann")};
+        Student tim = new Student("Tim");
+        Student[] students = {
+                new Student("Zach"),
+                new Student("Tim"),
+                new Student("Ann")
+        };
 
         Arrays.sort(students);
         System.out.println(Arrays.toString(students));
@@ -41,14 +45,14 @@ public class Main {
     }
 }
 
-
 class StudentGPAComparator implements Comparator<Student> {
+    @Override
     public int compare(Student o1, Student o2) {
         return (o1.gpa + o1.name).compareTo(o2.gpa + o2.name);
     }
 }
 
-class Student implements Comparable<Student> {
+class Student implements Comparable<Student>{
     private static int LAST_ID = 1000;
     private static Random random = new Random();
 
@@ -67,8 +71,14 @@ class Student implements Comparable<Student> {
         return "%d - %s (%.2f)".formatted(id, name, gpa);
     }
 
+//    @Override
+//    public int compareTo(Object o) {
+//        Student other = (Student) o;
+//        return name.compareTo(other.name);
+//    }
+
     @Override
-    public int compareTo(Student o) {;
+    public int compareTo(Student o) {
         return Integer.valueOf(id).compareTo(Integer.valueOf(o.id));
     }
 }
