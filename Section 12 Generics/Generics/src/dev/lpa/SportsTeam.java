@@ -40,6 +40,7 @@ public class SportsTeam {
         } else {
             totalLosses++;
         }
+
         return message;
     }
 

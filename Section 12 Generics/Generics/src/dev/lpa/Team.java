@@ -3,14 +3,14 @@ package dev.lpa;
 import java.util.ArrayList;
 import java.util.List;
 
-record Affiliation(String name, String type, String countryCode) {
+record Affiliation (String name, String type, String countryCode) {
     @Override
     public String toString() {
         return name + " (" + type + " in " + countryCode + ")";
     }
 }
 
-public class Team<T extends Player, S> {
+public class Team<T extends Player, S>  {
     private String teamName;
     private List<T> teamMembers = new ArrayList<>();
     private int totalWins = 0;
@@ -23,8 +23,8 @@ public class Team<T extends Player, S> {
     }
 
     public Team(String teamName, S affiliation) {
-        this.affiliation = affiliation;
         this.teamName = teamName;
+        this.affiliation = affiliation;
     }
 
     public void addTeamMember(T t) {
@@ -36,7 +36,7 @@ public class Team<T extends Player, S> {
     public void listTeamMembers() {
         System.out.print(teamName + " Roster:");
         System.out.println(affiliation == null ? "" : " AFFILIATION: " + affiliation);
-        for (T t : teamMembers) {
+        for (T t: teamMembers) {
             System.out.println(t.name());
         }
     }
@@ -56,6 +56,7 @@ public class Team<T extends Player, S> {
         } else {
             totalLosses++;
         }
+
         return message;
     }
 
