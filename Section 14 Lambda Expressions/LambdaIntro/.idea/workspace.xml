@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06a1e14c-0842-46ea-9a77-3ac8b0b20cfb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/Comparing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/src/dev/lpa/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/GenericChallenge.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/Layer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/Mappable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/Park.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/GenericChallenge/src/dev/lpa/River.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Generics/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section 12 Generics/Generics/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Generics/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section 12 Generics/Generics/src/dev/lpa/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Generics/src/dev/lpa/Team.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/lpa/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "clearcasting"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/clearcasting/javacourse.git",
+    "accountId": "e5db543b-f1d2-4f06-b586-95dd48935bd8"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2hhjLuJ0whNOJucyafkPOraUxzg" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "genericsreview",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06a1e14c-0842-46ea-9a77-3ac8b0b20cfb" name="Changes" comment="" />
+      <created>1718053152178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718053152178</updated>
+      <workItem from="1722199322022" duration="706000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
