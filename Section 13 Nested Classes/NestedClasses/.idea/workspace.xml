@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878758c4-c521-4c63-91ac-0b959febf8f0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/dev/lpa/domain/StoreEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section 12 Generics/Comparing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/lpa/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dev/lpa/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/lpa/domain/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dev/lpa/domain/EmployeeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/lpa/domain/EmployeeComparator.java" afterDir="false" />
     </list>
@@ -45,8 +49,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "genericsreview",
+    "git-widget-placeholder": "nestedclasses",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,6 +80,7 @@
       <updated>1722200965717</updated>
       <workItem from="1722200966717" duration="284000" />
       <workItem from="1727716187629" duration="811000" />
+      <workItem from="1727734819919" duration="2548000" />
     </task>
     <servers />
   </component>
